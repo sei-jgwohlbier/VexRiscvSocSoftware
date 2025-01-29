@@ -1,5 +1,5 @@
 # Set it to yes if you are using the sifive precompiled GCC pack
-SIFIVE_GCC_PACK ?= yes
+SIFIVE_GCC_PACK ?= no
 
 ifeq ($(SIFIVE_GCC_PACK),yes)
 	RISCV_NAME ?= riscv64-unknown-elf
@@ -7,9 +7,9 @@ ifeq ($(SIFIVE_GCC_PACK),yes)
 else
 	RISCV_NAME ?= riscv32-unknown-elf
 	ifeq ($(MULDIV),yes)
-		RISCV_PATH ?= /opt/riscv32im/
+		RISCV_PATH ?= /opt/rv32im/
 	else
-		RISCV_PATH ?= /opt/riscv32i/
+		RISCV_PATH ?= /opt/rv32i/
 	endif
 endif
 
