@@ -22,5 +22,5 @@ ifeq ($(COMPRESSED),yes)
 	MARCH := $(MARCH)ac
 endif
 
-CFLAGS += -march=$(MARCH)  -mabi=$(MABI)
-LDFLAGS += -march=$(MARCH)  -mabi=$(MABI)
+CFLAGS += -march=$(MARCH)_zicsr  -mabi=$(MABI)
+LDFLAGS += -march=$(MARCH)_zicsr  -mabi=$(MABI)
